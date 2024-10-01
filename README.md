@@ -2,6 +2,11 @@
 
 This project analyzes the approximation of the binomial distribution by the Poisson distribution. Using several distance measures, such as Kullback-Leibler (KL) divergence, Jensen-Shannon divergence, and Wasserstein distance, the project quantifies the error between these distributions for varying parameters `n` (number of trials) and `p` (probability of success).
 
+### Hypothesis
+
+In the approximation of the binomial distribution by the Poisson distribution, the underlying assumption is that no two events occur simultaneously within a given time unit. This assumption is valid when the success probability \( p \) is small, as the likelihood of event collisions (i.e., multiple events occurring in the same time unit) remains negligible. However, as \( p \) increases, the probability of collisions grows, and this approximation becomes increasingly inaccurate. Notably, this increase in event collisions is primarily influenced by \( p \) and remains independent of the number of trials \( n \). Consequently, the Poisson approximation is effective only for small values of \( p \), and its accuracy diminishes as \( p \) approaches larger values, regardless of the size of \( n \).
+
+
 ## Project Structure
 
 - **`calculate_differences.py`**: This script calculates the differences between binomial and Poisson distributions using various statistical metrics. It stores the results in a CSV file (`distribution_differences.csv`).
