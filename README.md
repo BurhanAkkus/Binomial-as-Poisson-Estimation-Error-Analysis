@@ -47,6 +47,13 @@ The primary output of the project includes:
 - A CSV file (`distribution_differences.csv`) containing the results of the distribution comparison.
 - Several visualizations showing the behavior of the divergence metrics across different values of `n` and `p`.
 
+### Conclusion
+
+The results of this analysis support the hypothesis that the Poisson approximation of the binomial distribution becomes increasingly inaccurate as the probability of success \( p \) increases. While the Poisson assumption that no two events occur simultaneously holds for small values of \( p \), the likelihood of event collisions grows as \( p \) increases. This leads to a greater divergence between the binomial and Poisson distributions, as shown by the rising values of KL divergence, Jensen-Shannon divergence, and Wasserstein distance.
+
+Importantly, the number of collisions—and thus the inaccuracy of the Poisson approximation—depends largely on \( p \) and remains independent of the number of trials \( n \). This confirms that for large \( p \) values, the Poisson approximation fails, regardless of \( n \), whereas for small \( p \), the approximation remains effective. These findings highlight the limitations of the Poisson approximation and emphasize the need to consider \( p \) carefully when using this method to approximate binomial behavior.
+
+
 ## Dependencies
 
 - Python 3.x
