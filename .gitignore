@@ -1,0 +1,10 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Local IDE state
+.idea/
+
+# Generated experiment outputs
+outputs/
+fixed_p_demos/
